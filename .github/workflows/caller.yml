@@ -1,0 +1,11 @@
+name: "Caller Workflow"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  call-workflow-a:
+    uses: jimsantora/chained-workflow-test/.github/workflows/workflow-a.yml@main
